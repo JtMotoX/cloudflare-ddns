@@ -8,9 +8,9 @@ ENV PATH="${VENV_DIR}/bin:$PATH"
 # ---- Dependencies ----
 FROM base AS dependencies
 # install dependencies
-COPY requirements.txt /
+COPY requirements.txt .
 RUN python3 -m venv "${VENV_DIR}"
-RUN pip install -r /requirements.txt
+RUN pip install -r requirements.txt
 
 #
 # ---- Release ----
